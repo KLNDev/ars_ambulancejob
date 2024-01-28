@@ -101,13 +101,13 @@ RegisterNetEvent("ars_ambulancejob:removeInventory", function()
 end)
 
 RegisterNetEvent("ars_ambulancejob:putOnStretcher", function(data)
-    if not player[data.target].isDead then return end
+    -- if not player[data.target].isDead then return end -- MODIF
     TriggerClientEvent("ars_ambulancejob:putOnStretcher", data.target, data.toggle)
 end)
 
 RegisterNetEvent("ars_ambulancejob:togglePatientFromVehicle", function(data)
     print(data.target)
-    if not player[data.target].isDead then return end
+    -- if not player[data.target].isDead then return end -- MODIF
 
     TriggerClientEvent("ars_ambulancejob:togglePatientFromVehicle", data.target, data.vehicle)
 end)

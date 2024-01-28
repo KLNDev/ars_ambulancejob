@@ -32,13 +32,13 @@ lib.addCommand(Config.ReviveAreaCommand, {
         {
             name = 'radius',
             type = 'number',
-            help = 'to revive players in radius',
+            help = 'Taille de la zone',
             optional = false,
         },
     },
     restricted = Config.AdminGroup
 }, function(source, args, raw)
-    if source <= 0 then return print("^4ars_ambulancejob > ^0", "You cant run this command from console") end
+    if source <= 0 then return print("^4ars_ambulancejob > ^0", "Tu ne peux pas utiliser ceci depuis la console") end
 
     local players = GetPlayers()
 
@@ -65,7 +65,7 @@ lib.addCommand(Config.HealCommand, {
         {
             name = 'target',
             type = 'playerId',
-            help = 'Target player\'s server id',
+            help = "L'ID du joueur à heal",
             optional = true,
         },
     },
@@ -90,7 +90,7 @@ lib.addCommand(Config.HealAreaCommand, {
         {
             name = 'radius',
             type = 'number',
-            help = 'to revive players in radius',
+            help = 'Taille de la zone',
             optional = false,
         },
     },
